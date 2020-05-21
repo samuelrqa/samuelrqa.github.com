@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicio 2.2 - EPM</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-main">
+    <div class="content">
+      <div class="actions">
+        <a href="index.html" class="button-close">
+          <span>X</span>
+        </a>
+      </div>
+      <header class="wording">
+        <p>
+          La aplicación web de EPM, necesita anunciar una serie de alivios económicos a los diferentes usuarios que
+          presentan morosidad o están atrasados en el pago de los servicios durante la contingencia por COVID 19; el
+          alivio consiste en condonar el 20%, 30% y 40% de la deuda, dependiendo del estrato socioeconómico que digite
+          el usuario al identificarse en plataforma. Los descentos son:
+        </p>
+        <ol>
+          <li>Estrato 1: 40%</li>
+          <li>Estrato 2: 30%</li>
+          <li>Estrato 3: 20%</li>
+        </ol>
+        <p>
+          Recibiendo la cedula del usuario y su estrato Socioeconómico determina mediante JavaScript cual será el
+          descuento al que tiene lugar el usuario.
+        </p>
+      </header>
+      <section class="container">
+        <div class="row">
+          <div class="col-12 mt-4">
+            <form id="form-epm" autocomplete="off">
+              <h5 id="title-epm">Ingresa los datos</h5>
+              <div class="form-row align-items-center justify-content-center mb-4">
+                <!--Campos numéricos-->
+                <div class="col-6 col-sm-3">
+                  <label class="sr-only" for="id-number"></label>
+                  <input type="number" class="form-control mb-2" id="id-number" placeholder="Numero de cédula"
+                    min="10000" required>
+                </div>
+                <div class="col-6 col-sm-3 my-1">
+                  <label class="mr-sm-2 sr-only" for="social-class">Estrato</label>
+                  <select class="custom-select mr-sm-2" id="social-class" required>
+                    <option selected disabled>Estrato</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <div>
+                  <!--Botones-->
+                  <button type="submit" class="btn btn-primary mx-1">Consultar</button>
+                  <button type="reset" class="btn btn-primary mx-1">Limpiar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-8 col-md-3 m-auto">
+            <div class="">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Descuento:</span>
+                </div>
+                <input type="text" class="form-control discount" value="0">
+                <div class="input-group-prepend">
+                  <span class="input-group-text rounded-right">%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="epm.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

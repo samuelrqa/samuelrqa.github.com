@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicio 2.3 - Rappi</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-main">
+    <div class="content animated zoomIn">
+      <div class="actions">
+        <a href="index.html" class="button-close">
+          <span>X</span>
+        </a>
+      </div>
+      <header class="wording">
+        <p>
+          Para el día de las madres un usuario de Rappi compra una torta de chocolate de tamaño mediano y desea conocer
+          el costo
+          total de su pedido teniendo en cuento que el valor unitario de la torta es de 30 000 y que por ser la fecha de
+          madres
+          se tiene un descuento de $10000 tenga en cuenta incluir el costo del domicilio que es de 7800 en el costo
+          total del envío.
+          Formule un algoritmo en JavaScript y muestre en pantalla, los datos del pedido y el costo total del mismo:
+        </p>
+      </header>
+      <section class="container">
+        <div class="row">
+          <div class="col-12 mt-4">
+            <form id="form-rappi" autocomplete="off">
+              <h5 id="title-epm">Ingresa la cantidad y calcula el costo</h5>
+              <div class="form-row align-items-center justify-content-center mb-4">
+                <div class="col-6 col-sm-3">
+                  <label class="sr-only" for="product"></label>
+                  <input type="text" class="form-control mb-2" id="product" value="Torta de chocolate" disabled>
+                </div>
+                <div class="col-6 col-sm-2">
+                  <label class="sr-only" for="number"></label>
+                  <input type="number" class="form-control mb-2" id="number" placeholder="Cantidad" min="1">
+                </div>
+                <div>
+                  <!--Botones-->
+                  <button type="submit" class="btn btn-primary mx-1">Calcular</button>
+                  <button type="reset" class="btn btn-primary mx-1" id="clear">Limpiar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="container" id="create-DOM">
+        <div class="row justify-content-center" id="row-rappi">
+          <!--EN ESTE DIV SE VAN A GENERAR LOS ELEMENTOS HTML CON JAVASCRIPT-->
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="rappi.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

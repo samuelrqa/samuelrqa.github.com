@@ -1,0 +1,241 @@
+html,
+body {
+  font-family: 'Dosis', sans-serif;
+  margin: 0;
+}
+
+.container-main {
+  background: #005C97;
+  background: -webkit-linear-gradient(to right, #363795, #005C97);
+  background: linear-gradient(to right, #363795, #005C97);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  max-width: 960px;
+  width: 100%;
+  height: 50vh;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  position: relative;
+  padding: 1.8em;
+  padding-top: 0.5em;
+  overflow: scroll;
+}
+
+/*Personalizar el scrollbar*/
+::-webkit-scrollbar {
+  width: 7px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 10px;
+  background-color: #005C97a6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/*scrollbar mozila*/
+.content {
+  scrollbar-color: #005C97a6 rgba(0, 0, 0, 0.1);
+  scrollbar-width: thin;
+}
+
+#ready i {
+  color: #005C97;
+  font-size: 22px;
+  margin-left: 0.8em;
+  margin-top: 0.5em;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #005C97;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0;
+}
+
+header h2 {
+  margin-top: 0;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.table {
+  width: 89%;
+  border-spacing: 0;
+  margin: 0 auto;
+}
+
+.table thead {
+  background-color: #005C9725;
+}
+
+.table td,
+.table th {
+  padding: 1em;
+  text-align: justify;
+}
+
+.table #item {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.table #answer {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #005C9725;
+}
+
+.wording {
+  border-bottom: solid 2px #363795;
+  padding-bottom: 0;
+  padding-right: 0.3em;
+  padding-top: 1em;
+  text-align: justify;
+}
+
+.actions {
+  position: absolute;
+  top: 0.5em;
+  right: 0.2em;
+}
+
+.button-close {
+  width: 25px;
+  height: 25px;
+  background-color: #363795;
+  color: white;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions a:hover {
+  background-color: #005C97;
+  color: #fff;
+  text-decoration: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin-bottom: 10px;
+}
+
+#create-DOM {
+  margin-top: 1em;
+}
+
+.card {
+  border-color: rgba(0, 151, 88, 0.205);
+  margin-top: 0.5em;
+  padding: 0.5em;
+}
+
+.money-team {
+  text-align: right;
+}
+
+.description h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.description p {
+  margin: 0 auto;
+}
+
+#title-epm {
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+.discount {
+  text-align: right;
+}
+
+.details {
+  text-align: center;
+  border: solid 1px rgba(0, 93, 151, 0.37);
+  border-radius: 8px;
+}
+
+.details h5 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.details h6 {
+  border-bottom: solid 1px rgba(0, 93, 151, 0.37);
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.details p {
+  margin-bottom: 0.2em;
+}
+
+#img-map img {
+  width: 100%;
+}
+
+@media (max-width:600px) {
+  .content {
+    padding: 1em;
+  }
+
+  td {
+    display: block;
+    width: 93%;
+  }
+
+  td:nth-of-type(1) {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #005C97;
+  }
+
+  th {
+    display: none;
+  }
+}
+
+@media (min-height: 640px) {
+  .content {
+    height: 600px;
+  }
+}

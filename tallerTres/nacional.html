@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicio 2.1 - Nacional</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-main">
+    <div class="content">
+      <div class="actions">
+        <a href="index.html" class="button-close">
+          <span>X</span>
+        </a>
+      </div>
+      <header class="wording">
+        <p>
+          Nacional te contrata para elaborar una aplicación web, que permita crear los abonos del equipo para
+          el próximo año, para ello se reciben los siguientes datos del cliente: nombre, apellidos, teléfono,
+          número de abonos y la tribuna a la que se desea abonar:
+        </p>
+        <ol>
+          <li>Sur-Norte: $ 144000</li>
+          <li>Oriental: $ 215000</li>
+          <li>Occidental: $ 444000</li>
+        </ol>
+      </header>
+      <section class="container">
+        <div class="row">
+          <form id="form" autocomplete="off">
+            <h5>Ingresa los datos</h5>
+            <div class="form-row align-items-center">
+              <div class="col-6 col-sm-3">
+                <label class="sr-only" for="name-customer"></label>
+                <input type="text" class="form-control mb-2" id="name-customer" placeholder="Nombres" required>
+              </div>
+              <div class="col-6 col-sm-3">
+                <label class="sr-only" for="lastName-customer"></label>
+                <input type="text" class="form-control mb-2" id="lastName-customer" placeholder="Apellidos" required>
+              </div>
+              <div class="col-4 col-sm-2">
+                <label class="sr-only" for="phone-customer"></label>
+                <input type="number" class="form-control mb-2" id="phone-customer" placeholder="Teléfono" minlength="7"
+                  required>
+              </div>
+              <div class="col-2 col-sm-1">
+                <label class="sr-only" for="amount"></label>
+                <input type="number" class="form-control mb-2" id="amount" title="Cantidad" placeholder="#" min="1"
+                  max="99" required>
+              </div>
+              <div class="col-6 col-sm-3 my-1">
+                <label class="mr-sm-2 sr-only" for="platform">Tribuna</label>
+                <select class="custom-select mr-sm-2" id="platform" required>
+                  <option selected disabled>Tribuna abonada</option>
+                  <option value="1">Sur-Norte</option>
+                  <option value="2">Oriental</option>
+                  <option value="3">Occidental</option>
+                </select>
+              </div>
+              <div class="col col-md-9">
+                <button type="submit" class="btn btn-primary mb-2" id="submit">Registrar</button>
+              </div>
+              <div class="col col-md-3">
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend" id="cop">
+                    <span class="input-group-text">Total $</span>
+                  </div>
+                  <input type="text" class="form-control money-team" value="0" disabled>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="container text-center" id="create-DOM">
+        <div class="row" id="row-template">
+          <!--EN ESTE DIV SE VAN A GENERAR LOS ELEMENTOS HTML CON JAVASCRIPT-->
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="controlador.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
